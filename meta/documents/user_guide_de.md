@@ -1,0 +1,68 @@
+# Verbinden Sie Ihren Plentymarket Shops mit Trust Payments
+
+Trust Payments bietet Ihnen als PSP / E-Commerce hub direkten Zugang zu einer grossen Auswahl an Zahlungsverarbeitern und
+Zahlungsmethoden via eine standardisierte API. Mit anderen Worten lösen wir mit diesem produkt
+Ihre Zahlungsprobleme auf einen Schlag in Ihrem Webshop. Sobald Sie das Plugin in Ihrem Shop installiert haben,
+können Sie aus einem der integrierten <a href="https://ep.trustpayments.com/en/processors" target="_blank">Verarbeitern</a> auswählen für die
+Verarbeitung Ihrer Zahlung. Damit wird die Verarbeitung via Kreditkarten aber auch jede weitere Form alternativen
+Zahlungsarten ermöglicht. Sie können zudem auch Rechnungen Verarbeiten (Für Schweizer Kunden sogar mit Einzahlungsschein).
+Daneben können Sie Ihre Kunden auch mittels selbst-konfigurierbaren Mahnläufen mahnen u.v.m.
+ 
+Für die Zahlungsabwicklung wird der Kunde auf die Trust Payments payment page weitergeleitet, welche Sie vollständig selber gestalten können. 
+ 
+Neben der Zahlungsverarbeitung löst Ihnen Trust Payments auch noch zahlreiche weitere Probleme die Sie als Händler haben. Wie beispielsweise:
+
+* Sie skalieren per Knopfdruck und können eine neu Zahlart aktivieren
+* Sie können Ihre eigenen Rechnungsdokumente erstellen und den Kunden zustellen oder drucken via Cloud
+* Dokumente können über die Cloud auf Ihrem Drucker gedruckt oder archiviert werden
+* Definieren Sie Ihre Mahnläufe für Rechnungen die Sie selber verarbeiten
+* Versenden Sie automatisch Erinnerungen und Mahnungen an Ihre Kudnen. 
+
+Dies und vieles Mehr steht Ihnen ab sofort mit einer direkten Integration zur Verfügung. 
+
+
+## Voraussetzungen
+
+Damit Sie Trust Payments nutzen können müssen Sie folgende Voraussetzungen erfüllen:
+
+* Sie benötigen ein Trust Payments Konto. Dieses können Sie mit dem <a href="https://ep.trustpayments.com/user/signup" target="_blank">signup</a> Link kostenfrei erstellen.
+* Sie müssen das Plugin installieren entweder via Marketplace oder indem Sie das Github Repository unter Plugin > Git einfügen.
+
+ 
+## Plugin configuration
+ 
+Das Plugin kann einfach in Ihrem Shop installiert und Konfiguriert werden.
+
+* Erstellen Sie Ihr Konto und den Application User inkl. User ID, Secret und Space ID. Dieses tragen Sie unter Plugins > Konfiguraiton ein.
+* Aktivieren Sie die Zahlungsmethoden, welche Sie im Space aktiv haben
+
+ 
+### Anpassen der E-Mail, Payment Page und Dokumente
+
+Für die Verarbeitung der Zahlugn werden Sie auf die Zahlungsseite von Trust Payments weitergeleitet. Diese Seite können Sie mit Hilfe der TWIG Templates komplett selber gestalten. Mehr informationen finden Sie in der <a href="https://ep.trustpayments.com/de-ch/doc/document-handling" target="_blank">Dokumentation</a>.
+ 
+ 
+### Gutschriften
+ 
+Tragen Sie noch die Stati für die Gutschriften ein, bei welchem automatisch eine Gutschriftsanzeige an Trust Payments übermittelt wird. 
+Bitte führen Sie folgende Schritte durch:
+
+1. Erstellen Sie unter Einstellung > Aufträge > Ereignisaktionen eine Ereignisaktion für Statuswechsel. Wählen Sie den initialen
+Status und die Aktion "Rückzahlung der Trust Payments-Zahlung", welche Sie im Ordner Plugin finden. 
+2. Speichern Sie die Ereignisaktion.
+
+Sie können nun entweder Gutschriften oder Retouren direkt in der Bestellung anlegen:
+
+1. Öffnen Sie die Bestellung und wählen Sie entweder eine Gutschrift oder eine Retoure anlegen. 
+2. Selektieren Sie die Produkte, die Sie gutschreiben / retournieren möchten. 
+3. Verschieben Sie den Status der Bestellung in den initialen Status der Ereignisaktion, welche Sie oben definiert haben. Dies führt automatisch dazu,
+dass die Bestellung mit Trust Payments synchronisiert wird. 
+
+## Further reading
+
+Für mehr Informationen verweisen wir Sie auf unsere extensive <a href="https://ep.trustpayments.com/de-ch/doc" target="_blank">Dokumentation</a>.
+Bei Fragen zum Produkt oder zur Konfiguration steht Ihnen sonst unser <a href="supportUrl" target="_blank">Support</a> ebenfalls zur Verfügung. 
+ 
+## Lizenz
+ 
+Das Plugin wird unter der Apapche 2 Lizenz vertrieben. 

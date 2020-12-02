@@ -1,0 +1,926 @@
+{
+    "formatVersion": 1,
+    "menu": {
+        "Config.GrundeinstellungenTab": {
+            "label": "Config.GrundeinstellungenTab",
+            "formFields": {
+                "api_user_id": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.apiUserIdLabel",
+                    "options": {}
+                },
+                "api_user_key": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.apiUserKeyLabel",
+                    "options": {}
+                },
+                "space_id": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.spaceIdLabel",
+                    "options": {}
+                },
+                "resource_version": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.resourceVersionLabel",
+                    "options": {
+                        "defaultValue": "V2"
+                    }
+                },
+                "refund_successful_status": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.refundSuccessfulStatusLabel",
+                    "options": {
+                        "defaultValue": "11.2"
+                    }
+                },
+                "refund_failed_status": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.refundFailedStatusLabel",
+                    "options": {
+                        "defaultValue": "11.3"
+                    }
+                },
+                "confirmation_invoice": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.confirmationInvoiceLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "confirmation_packing_slip": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.confirmationPackingSlipLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                }
+            }
+        },
+        "Config.AlipayTab": {
+            "label": "Config.AlipayTab",
+            "formFields": {
+                "alipay_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.alipayActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "alipay_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.alipayTitleLabel",
+                    "options": {
+                        "defaultValue": "Alipay"
+                    }
+                },
+                "alipay_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.alipayDescriptionLabel",
+                    "options": {}
+                },
+                "alipay_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.alipayFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.BankBerweisungTab": {
+            "label": "Config.BankBerweisungTab",
+            "formFields": {
+                "banktransfer_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.banktransferActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "banktransfer_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.banktransferTitleLabel",
+                    "options": {
+                        "defaultValue": "Bank Transfer"
+                    }
+                },
+                "banktransfer_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.banktransferDescriptionLabel",
+                    "options": {}
+                },
+                "banktransfer_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.banktransferFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.CASHUTab": {
+            "label": "Config.CASHUTab",
+            "formFields": {
+                "cashu_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.cashuActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "cashu_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.cashuTitleLabel",
+                    "options": {
+                        "defaultValue": "CASHU"
+                    }
+                },
+                "cashu_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.cashuDescriptionLabel",
+                    "options": {}
+                },
+                "cashu_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.cashuFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.KreditDebitkarteTab": {
+            "label": "Config.KreditDebitkarteTab",
+            "formFields": {
+                "creditcard_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.creditcardActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "creditcard_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.creditcardTitleLabel",
+                    "options": {
+                        "defaultValue": "Credit / Debit Card"
+                    }
+                },
+                "creditcard_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.creditcardDescriptionLabel",
+                    "options": {}
+                },
+                "creditcard_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.creditcardFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.DaoPayTab": {
+            "label": "Config.DaoPayTab",
+            "formFields": {
+                "daopay_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.daopayActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "daopay_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.daopayTitleLabel",
+                    "options": {
+                        "defaultValue": "DaoPay"
+                    }
+                },
+                "daopay_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.daopayDescriptionLabel",
+                    "options": {}
+                },
+                "daopay_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.daopayFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.LastschriftSEPATab": {
+            "label": "Config.LastschriftSEPATab",
+            "formFields": {
+                "directdebitsepa_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.directdebitsepaActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "directdebitsepa_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.directdebitsepaTitleLabel",
+                    "options": {
+                        "defaultValue": "Direct Debit (SEPA)"
+                    }
+                },
+                "directdebitsepa_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.directdebitsepaDescriptionLabel",
+                    "options": {}
+                },
+                "directdebitsepa_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.directdebitsepaFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.LastschriftUKTab": {
+            "label": "Config.LastschriftUKTab",
+            "formFields": {
+                "directdebituk_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.directdebitukActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "directdebituk_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.directdebitukTitleLabel",
+                    "options": {
+                        "defaultValue": "Direct Debit (UK)"
+                    }
+                },
+                "directdebituk_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.directdebitukDescriptionLabel",
+                    "options": {}
+                },
+                "directdebituk_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.directdebitukFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.EPSTab": {
+            "label": "Config.EPSTab",
+            "formFields": {
+                "eps_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.epsActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "eps_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.epsTitleLabel",
+                    "options": {
+                        "defaultValue": "EPS"
+                    }
+                },
+                "eps_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.epsDescriptionLabel",
+                    "options": {}
+                },
+                "eps_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.epsFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.GiropayTab": {
+            "label": "Config.GiropayTab",
+            "formFields": {
+                "giropay_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.giropayActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "giropay_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.giropayTitleLabel",
+                    "options": {
+                        "defaultValue": "Giropay"
+                    }
+                },
+                "giropay_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.giropayDescriptionLabel",
+                    "options": {}
+                },
+                "giropay_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.giropayFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.iDealTab": {
+            "label": "Config.iDealTab",
+            "formFields": {
+                "ideal_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.idealActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "ideal_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.idealTitleLabel",
+                    "options": {
+                        "defaultValue": "iDeal"
+                    }
+                },
+                "ideal_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.idealDescriptionLabel",
+                    "options": {}
+                },
+                "ideal_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.idealFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.RechnungTab": {
+            "label": "Config.RechnungTab",
+            "formFields": {
+                "invoice_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.invoiceActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "invoice_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.invoiceTitleLabel",
+                    "options": {
+                        "defaultValue": "Invoice"
+                    }
+                },
+                "invoice_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.invoiceDescriptionLabel",
+                    "options": {}
+                },
+                "invoice_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.invoiceFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.MasterPassTab": {
+            "label": "Config.MasterPassTab",
+            "formFields": {
+                "masterpass_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.masterpassActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "masterpass_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.masterpassTitleLabel",
+                    "options": {
+                        "defaultValue": "MasterPass"
+                    }
+                },
+                "masterpass_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.masterpassDescriptionLabel",
+                    "options": {}
+                },
+                "masterpass_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.masterpassFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.OnlineBankingTab": {
+            "label": "Config.OnlineBankingTab",
+            "formFields": {
+                "onlinebanking_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.onlinebankingActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "onlinebanking_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.onlinebankingTitleLabel",
+                    "options": {
+                        "defaultValue": "Online Banking"
+                    }
+                },
+                "onlinebanking_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.onlinebankingDescriptionLabel",
+                    "options": {}
+                },
+                "onlinebanking_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.onlinebankingFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.payboxTab": {
+            "label": "Config.payboxTab",
+            "formFields": {
+                "paybox_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.payboxActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "paybox_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.payboxTitleLabel",
+                    "options": {
+                        "defaultValue": "paybox"
+                    }
+                },
+                "paybox_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.payboxDescriptionLabel",
+                    "options": {}
+                },
+                "paybox_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.payboxFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.PaydirektTab": {
+            "label": "Config.PaydirektTab",
+            "formFields": {
+                "paydirekt_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.paydirektActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "paydirekt_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paydirektTitleLabel",
+                    "options": {
+                        "defaultValue": "Paydirekt"
+                    }
+                },
+                "paydirekt_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paydirektDescriptionLabel",
+                    "options": {}
+                },
+                "paydirekt_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paydirektFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.PaylibTab": {
+            "label": "Config.PaylibTab",
+            "formFields": {
+                "paylib_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.paylibActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "paylib_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paylibTitleLabel",
+                    "options": {
+                        "defaultValue": "Paylib"
+                    }
+                },
+                "paylib_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paylibDescriptionLabel",
+                    "options": {}
+                },
+                "paylib_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paylibFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.PayPalTab": {
+            "label": "Config.PayPalTab",
+            "formFields": {
+                "paypal_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.paypalActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "paypal_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paypalTitleLabel",
+                    "options": {
+                        "defaultValue": "PayPal"
+                    }
+                },
+                "paypal_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paypalDescriptionLabel",
+                    "options": {}
+                },
+                "paypal_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paypalFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.paysafecardTab": {
+            "label": "Config.paysafecardTab",
+            "formFields": {
+                "paysafecard_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.paysafecardActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "paysafecard_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paysafecardTitleLabel",
+                    "options": {
+                        "defaultValue": "paysafecard"
+                    }
+                },
+                "paysafecard_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paysafecardDescriptionLabel",
+                    "options": {}
+                },
+                "paysafecard_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.paysafecardFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.POLiTab": {
+            "label": "Config.POLiTab",
+            "formFields": {
+                "poli_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.poliActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "poli_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.poliTitleLabel",
+                    "options": {
+                        "defaultValue": "POLi"
+                    }
+                },
+                "poli_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.poliDescriptionLabel",
+                    "options": {}
+                },
+                "poli_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.poliFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.Przelewy24Tab": {
+            "label": "Config.Przelewy24Tab",
+            "formFields": {
+                "przelewy24_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.przelewy24ActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "przelewy24_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.przelewy24TitleLabel",
+                    "options": {
+                        "defaultValue": "Przelewy24"
+                    }
+                },
+                "przelewy24_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.przelewy24DescriptionLabel",
+                    "options": {}
+                },
+                "przelewy24_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.przelewy24FeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.QIWITab": {
+            "label": "Config.QIWITab",
+            "formFields": {
+                "qiwi_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.qiwiActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "qiwi_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.qiwiTitleLabel",
+                    "options": {
+                        "defaultValue": "QIWI"
+                    }
+                },
+                "qiwi_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.qiwiDescriptionLabel",
+                    "options": {}
+                },
+                "qiwi_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.qiwiFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.SkrillTab": {
+            "label": "Config.SkrillTab",
+            "formFields": {
+                "skrill_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.skrillActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "skrill_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.skrillTitleLabel",
+                    "options": {
+                        "defaultValue": "Skrill"
+                    }
+                },
+                "skrill_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.skrillDescriptionLabel",
+                    "options": {}
+                },
+                "skrill_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.skrillFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.SOFORTBankingTab": {
+            "label": "Config.SOFORTBankingTab",
+            "formFields": {
+                "sofortbanking_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.sofortbankingActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "sofortbanking_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.sofortbankingTitleLabel",
+                    "options": {
+                        "defaultValue": "SOFORT Banking"
+                    }
+                },
+                "sofortbanking_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.sofortbankingDescriptionLabel",
+                    "options": {}
+                },
+                "sofortbanking_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.sofortbankingFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.TenpayTab": {
+            "label": "Config.TenpayTab",
+            "formFields": {
+                "tenpay_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.tenpayActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "tenpay_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.tenpayTitleLabel",
+                    "options": {
+                        "defaultValue": "Tenpay"
+                    }
+                },
+                "tenpay_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.tenpayDescriptionLabel",
+                    "options": {}
+                },
+                "tenpay_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.tenpayFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.TrustlyTab": {
+            "label": "Config.TrustlyTab",
+            "formFields": {
+                "trustly_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.trustlyActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "trustly_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.trustlyTitleLabel",
+                    "options": {
+                        "defaultValue": "Trustly"
+                    }
+                },
+                "trustly_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.trustlyDescriptionLabel",
+                    "options": {}
+                },
+                "trustly_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.trustlyFeeLabel",
+                    "options": {}
+                }
+            }
+        },
+        "Config.TWINTTab": {
+            "label": "Config.TWINTTab",
+            "formFields": {
+                "twint_active": {
+                    "type": "checkBox",
+                    "required": false,
+                    "label": "Config.twintActiveLabel",
+                    "options": {
+                        "defaultValue": true
+                    }
+                },
+                "twint_title": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.twintTitleLabel",
+                    "options": {
+                        "defaultValue": "TWINT"
+                    }
+                },
+                "twint_description": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.twintDescriptionLabel",
+                    "options": {}
+                },
+                "twint_fee": {
+                    "type": "inputText",
+                    "required": false,
+                    "label": "Config.twintFeeLabel",
+                    "options": {}
+                }
+            }
+        }
+    }
+}
