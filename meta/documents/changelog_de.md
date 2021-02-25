@@ -1,5 +1,10 @@
 # Release Notes for Trust Payments
 
+## v2.0.15 (2021-02-25)
+
+### Fixed
+- Update plugin.json.
+
 ## v2.0.14 (2021-02-16)
 
 ### Added
