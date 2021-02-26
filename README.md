@@ -11,8 +11,8 @@ This repository contains the plentymarkets extension that enables to process pay
 
 ## Documentation
 
-* [Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/plentymarkets/2.0.15/docs/en/documentation.html)
+* [Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/plentymarkets/2.0.16/docs/en/documentation.html)
 
 ## License
 
-Please see the [license file](https://github.com/TrustPayments/plentymarkets/blob/2.0.15/LICENSE) for more information.
+Please see the [license file](https://github.com/TrustPayments/plentymarkets/blob/2.0.16/LICENSE) for more information.
