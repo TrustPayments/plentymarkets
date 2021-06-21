@@ -1,3 +1,5 @@
+> This plugin supports the Trust Enterprise Platform which can be identified by the URL for the platform ep.trustpayments.com.
+
 # Trust Payments plentymarkets
 This repository contains the plentymarkets extension that enables to process payments with [Trust Payments](https://www.trustpayments.com//).
 
@@ -11,8 +13,8 @@ This repository contains the plentymarkets extension that enables to process pay
 
 ## Documentation
 
-* [Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/plentymarkets/2.0.16/docs/en/documentation.html)
+* [Documentation](https://plugin-documentation.ep.trustpayments.com/TrustPayments/plentymarkets/2.0.17/docs/en/documentation.html)
 
 ## License
 
-Please see the [license file](https://github.com/TrustPayments/plentymarkets/blob/2.0.16/LICENSE) for more information.
+Please see the [license file](https://github.com/TrustPayments/plentymarkets/blob/2.0.17/LICENSE) for more information.
