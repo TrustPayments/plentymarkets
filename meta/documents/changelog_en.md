@@ -1,5 +1,10 @@
 # Release Notes for Trust Payments
 
+## v2.0.20 (2021-06-21)
+
+### Fixed
+- SDK update
+
 ## v2.0.19 (2021-06-21)
 
 ### Fixed
