@@ -1,5 +1,10 @@
 # Release Notes for Trust Payments
 
+## v2.0.21 (2022-07-05)
+
+### Fixed
+- allow custom payment icons
+
 ## v2.0.20 (2021-06-21)
 
 ### Fixed
