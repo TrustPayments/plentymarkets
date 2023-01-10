@@ -105,7 +105,6 @@ class TrustPaymentsServiceProvider extends ServiceProvider
 
         $trustPaymentsServiceProviderHelper->addPaymentMethodContentEventListener();
         $trustPaymentsServiceProviderHelper->addExecutePaymentContentEventListener();
-        $trustPaymentsServiceProviderHelper->createWebhook();
 
         $cronContainer->add(CronContainer::EVERY_FIFTEEN_MINUTES, WebhookCronHandler::class);
     }

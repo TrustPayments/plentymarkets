@@ -7,11 +7,9 @@ use Plenty\Modules\Order\Contracts\OrderRepositoryContract;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodRepositoryContract;
 use Plenty\Modules\Payment\Events\Checkout\GetPaymentMethodContent;
 use Plenty\Modules\Payment\Events\Checkout\ExecutePayment;
-use Plenty\Plugin\ConfigRepository;
 use Plenty\Plugin\Events\Dispatcher;
 use TrustPayments\Helper\PaymentHelper;
 use TrustPayments\Services\PaymentService;
-use TrustPayments\Services\TrustPaymentsSdkService;
 
 class TrustPaymentsServiceProviderHelper
 {
@@ -45,16 +43,6 @@ class TrustPaymentsServiceProviderHelper
      */
     private $paymentMethodService;
     
-    /**
-     * @var $sdkService
-     */
-    private $sdkService;
-
-    /**
-     *
-     * @var ConfigRepository
-     */
-    private $config;
 
     /**
      * Construct the helper
@@ -65,8 +53,6 @@ class TrustPaymentsServiceProviderHelper
      * @param  OrderRepositoryContract $orderRepository
      * @param  PaymentService $paymentService
      * @param  PaymentMethodRepositoryContract $paymentMethodService
-     * @param  TrustPaymentsSdkService $sdkService
-     * @param  ConfigRepository $config
      */
     public function __construct(
         Dispatcher $eventDispatcher,
@@ -74,9 +60,7 @@ class TrustPaymentsServiceProviderHelper
         BasketRepositoryContract $basketRepository,
         OrderRepositoryContract $orderRepository,
         PaymentService $paymentService,
-        PaymentMethodRepositoryContract $paymentMethodService,
-        TrustPaymentsSdkService $sdkService, 
-        ConfigRepository $config
+        PaymentMethodRepositoryContract $paymentMethodService
     ) {
         $this->eventDispatcher = $eventDispatcher;
         $this->paymentHelper = $paymentHelper;
@@ -84,8 +68,6 @@ class TrustPaymentsServiceProviderHelper
         $this->orderRepository = $orderRepository;
         $this->paymentService = $paymentService;
         $this->paymentMethodService = $paymentMethodService;
-        $this->sdkService = $sdkService;
-        $this->config = $config;
     }
 
     /**
@@ -121,21 +103,5 @@ class TrustPaymentsServiceProviderHelper
                 $event->setType(isset($result['type']) ? $result['type'] : '');
             }
         });
-    }
-
-    /**
-     * Creates the webhook
-     * @return never
-     */
-    public function createWebhook()
-    {
-        /** @var \Plenty\Modules\Helper\Services\WebstoreHelper $webstoreHelper */
-        $webstoreHelper = pluginApp(\Plenty\Modules\Helper\Services\WebstoreHelper::class);
-        /** @var \Plenty\Modules\System\Models\WebstoreConfiguration $webstoreConfig */
-        $webstoreConfig = $webstoreHelper->getCurrentWebstoreConfiguration();
-        $this->sdkService->call('createWebhook', [
-            'storeId' => $webstoreConfig->webstoreId,
-            'notificationUrl' => $webstoreConfig->domainSsl . '/trustpayments/update-transaction' . ($this->config->get('plenty.system.info.urlTrailingSlash', 0) == 2 ? '/' : '')
-        ]);
     }
 }
